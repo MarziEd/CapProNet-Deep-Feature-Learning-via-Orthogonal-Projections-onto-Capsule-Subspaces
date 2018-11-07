@@ -1,5 +1,6 @@
+# CapProNet 
+We built our CapProNet with Resnet backbone from official tensorflow implementation.
 # ResNet in TensorFlow
-
 Deep residual networks, or ResNets for short, provided the breakthrough idea of identity mappings in order to enable training of very deep convolutional neural networks. This folder contains an implementation of ResNet for the ImageNet dataset written in TensorFlow.
 
 See the following papers for more background:
@@ -20,16 +21,12 @@ Please proceed according to which dataset you would like to train/evaluate on:
 We used Tensorflow 1.6 and Python 2.7 to run our experiments.
 First make sure you've [added the models folder to your Python path](/official/#running-the-models); otherwise you may encounter an error like `ImportError: No module named official.resnet`.
 
-Then download and extract the CIFAR-100 data from Alex's website, specifying the location with the `--data_dir` flag. Run the following:
-
-```
-python cifar10_download_and_extract.py
-```
+Then download and extract the CIFAR-100 data from Alex's website.
 
 Then to train the model, run the following:
 
 ```
-python Cifar100_main_lambda_inv_110l.py
+python Cifar100_main_lambda_inv_110l.py --data_dir= path/to/Cifar100
 ```
 
 Use `--data_dir` to specify the location of the CIFAR-100 data used in the previous step. There are more flag options as described in `Cifar100_main_lambda_inv_110l.py`.
