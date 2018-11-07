@@ -13,14 +13,14 @@ In code v1 refers to the resnet defined in [1], while v2 correspondingly refers 
 Please proceed according to which dataset you would like to train/evaluate on:
 
 
-## CIFAR-10
+## CIFAR-100
 
 ### Setup
 
-You simply need to have the latest version of TensorFlow installed.
+We used Tensorflow 1.6 and Python 2.7 to run our experiments.
 First make sure you've [added the models folder to your Python path](/official/#running-the-models); otherwise you may encounter an error like `ImportError: No module named official.resnet`.
 
-Then download and extract the CIFAR-10 data from Alex's website, specifying the location with the `--data_dir` flag. Run the following:
+Then download and extract the CIFAR-100 data from Alex's website, specifying the location with the `--data_dir` flag. Run the following:
 
 ```
 python cifar10_download_and_extract.py
@@ -32,6 +32,6 @@ Then to train the model, run the following:
 python Cifar100_main_lambda_inv_110l.py
 ```
 
-Use `--data_dir` to specify the location of the CIFAR-10 data used in the previous step. There are more flag options as described in `cifar10_main.py`.
+Use `--data_dir` to specify the location of the CIFAR-100 data used in the previous step. There are more flag options as described in `Cifar100_main_lambda_inv_110l.py`.
 
 
