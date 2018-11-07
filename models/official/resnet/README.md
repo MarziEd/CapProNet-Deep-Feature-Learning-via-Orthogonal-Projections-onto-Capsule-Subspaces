@@ -29,35 +29,9 @@ python cifar10_download_and_extract.py
 Then to train the model, run the following:
 
 ```
-python cifar10_main.py
+python Cifar100_main_lambda_inv_110l.py
 ```
 
 Use `--data_dir` to specify the location of the CIFAR-10 data used in the previous step. There are more flag options as described in `cifar10_main.py`.
 
 
-## ImageNet
-
-### Setup
-To begin, you will need to download the ImageNet dataset and convert it to TFRecord format. Follow along with the [Inception guide](https://github.com/tensorflow/models/tree/master/research/inception#getting-started) in order to prepare the dataset.
-
-Once your dataset is ready, you can begin training the model as follows:
-
-```
-python imagenet_main.py --data_dir=/path/to/imagenet
-```
-
-The model will begin training and will automatically evaluate itself on the validation data roughly once per epoch.
-
-Note that there are a number of other options you can specify, including `--model_dir` to choose where to store the model and `--resnet_size` to choose the model size (options include ResNet-18 through ResNet-200). See [`resnet.py`](resnet.py) for the full list of options.
-
-### Pre-trained model
-You can download 190 MB pre-trained versions of ResNet-50 achieving 76.3% and 75.3% (respectively) top-1 single-crop accuracy here: [resnetv2_imagenet_checkpoint.tar.gz](http://download.tensorflow.org/models/official/resnetv2_imagenet_checkpoint.tar.gz), [resnetv1_imagenet_checkpoint.tar.gz](http://download.tensorflow.org/models/official/resnetv1_imagenet_checkpoint.tar.gz). Simply download and uncompress the file, and point the model to the extracted directory using the `--model_dir` flag.
-
-Other versions and formats:
-
-* [ResNet-v2-ImageNet Checkpoint](http://download.tensorflow.org/models/official/resnetv2_imagenet_checkpoint.tar.gz)
-* [ResNet-v2-ImageNet SavedModel](http://download.tensorflow.org/models/official/resnetv2_imagenet_savedmodel.tar.gz)
-* [ResNet-v2-ImageNet Frozen Graph](http://download.tensorflow.org/models/official/resnetv2_imagenet_frozen_graph.pb)
-* [ResNet-v1-ImageNet Checkpoint](http://download.tensorflow.org/models/official/resnetv1_imagenet_checkpoint.tar.gz)
-* [ResNet-v1-ImageNet SavedModel](http://download.tensorflow.org/models/official/resnetv1_imagenet_savedmodel.tar.gz)
-* [ResNet-v1-ImageNet Frozen Graph](http://download.tensorflow.org/models/official/resnetv1_imagenet_frozen_graph.pb)
